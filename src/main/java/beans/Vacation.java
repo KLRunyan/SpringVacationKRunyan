@@ -1,5 +1,6 @@
 package beans;
 
+import java.text.DecimalFormat;
 
 public class Vacation {
 	
@@ -8,15 +9,26 @@ public class Vacation {
 	private int numOfDays;
 	private double cost;
 	private String season;
+	boolean isBooked;
+	DecimalFormat df = new DecimalFormat("##.##");
 	
 	
 	
+	public boolean isBooked() {
+		return isBooked;
+	}
+
+	public void setBooked(boolean isBooked) {
+		this.isBooked = isBooked;
+	}
+
 	public Vacation() {
 	
 	}
 
 	public Vacation(int vacationNum, String vacationLocation, int numOfDays, double cost, String season) {
 		super();
+		this.vacationNum = vacationNum;
 		this.vacationLocation = vacationLocation;
 		this.numOfDays = numOfDays;
 		this.cost = cost;

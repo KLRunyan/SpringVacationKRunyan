@@ -15,7 +15,7 @@ public class BeanConfiguration {
 	
 	@Bean(autowire=Autowire.BY_NAME)
 	public VacationService vacationService() {
-		VacationServiceImpl bean = new VacationServiceImpl(vacationDao());
+		VacationServiceImpl bean = new VacationServiceImpl();
 		//bean.setDao(VacationDao());
 		return bean;
 	}

@@ -46,7 +46,8 @@ public class VacationDaoJpaImpl implements VacationDao{
 		return null;
 	}
 
-	public List<Vacation> find(double cost) {
+
+	public List<Vacation> find(Double cost) {
 		// TODO Auto-generated method stub
 		return null;
 	}

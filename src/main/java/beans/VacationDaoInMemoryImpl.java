@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
 
-public class VacationDaoInMemoryImpl<vacationsMap> implements VacationDao{
+public class VacationDaoInMemoryImpl implements VacationDao{
 
 	private Map<Integer,Vacation>vacationsMap = new HashMap<Integer,Vacation>();
 	
-	{
+	public VacationDaoInMemoryImpl() {
 		Vacation vacation1 = new Vacation(1, "Bermuda", 5, 1029.00, "Summer");
 		Vacation vacation2 = new Vacation(2, "Peru", 4, 955.99, "Winter");
 		
@@ -44,11 +44,6 @@ public class VacationDaoInMemoryImpl<vacationsMap> implements VacationDao{
 		return vacationsMap.get(vacationNum);
 	}
 
-	public List<Vacation> find(double cost) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	public List<Vacation> find(List<Integer> vacationNums) {
 		List<Vacation>vacations = new ArrayList<Vacation>();
 		for(Integer vacationNum:vacationNums) {
@@ -64,5 +59,10 @@ public class VacationDaoInMemoryImpl<vacationsMap> implements VacationDao{
 			}
 		}
 		return vacations;
+	}
+
+	public List<Vacation> find(Double cost) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

@@ -9,8 +9,8 @@ public interface VacationDao {
 	public void update(List<Vacation>vacations);
 	public void delete(int vacationNum);
 	public Vacation find(int vacationNum);
-	//public List<Vacation>find(List<int>vacationNum);
+	public List<Vacation>find(List<Integer>vacationNum);
 	public List<Vacation>find(String vacationLocation);
-	public List<Vacation>find(double cost);
+	public List<Vacation>find(Double cost);
 	
 }
